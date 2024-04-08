@@ -16,5 +16,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  base:["sermonize"]
 };
 export default config;
