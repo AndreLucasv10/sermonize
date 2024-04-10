@@ -52,13 +52,31 @@ export const Main = () => {
 }
 
 
+const galeria =[
+    {id:1, nome:"pessoa 1"},
+    {id:2, nome:"pessoa 2"},
+    {id:3, nome:"pessoa 3"},
+    {id:4, nome:"pessoa 4"},
+    {id:5,nome:"pessoa 5"},
+    {id:6,nome:"pessoa 6"},
+    {id:7,nome:"pessoa 7"},
+    {id:8,nome:"pessoa 8"},
+    {id:9,nome:"pessoa 9"},
+    {id:10,nome:"pessoa 10"},
+]
 
 
 export const Second = () => {
     return (
         <div className="w-screen h-[550px] bg-black">
-            <div>
+            <div className="w-screen flex flex-col justify-center items-center">
+                <h1 className="text-white text-center mb-4 uppercase font-bold">Galeria</h1>
 
+                <div className="grid grid-cols-5 gap-8 text-center items-center">
+                    {galeria.map(galeria=>
+                        <p  className="text-white bg-blue-500 p-8 w-[200px] h-[200px]" key={galeria.id}>{galeria.nome}</p>
+                    )}
+                </div>
             </div>
         </div>
     )
