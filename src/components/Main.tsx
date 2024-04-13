@@ -53,16 +53,16 @@ export const Main = () => {
 
 
 const galeria =[
-    {id:1, nome:"pessoa 1"},
-    {id:2, nome:"pessoa 2"},
-    {id:3, nome:"pessoa 3"},
-    {id:4, nome:"pessoa 4"},
-    {id:5,nome:"pessoa 5"},
-    {id:6,nome:"pessoa 6"},
-    {id:7,nome:"pessoa 7"},
-    {id:8,nome:"pessoa 8"},
-    {id:9,nome:"pessoa 9"},
-    {id:10,nome:"pessoa 10"},
+    {id:1, nome:"pessoa 1", url:'https://cdn-icons-png.flaticon.com/512/0/93.png'},
+    {id:2, nome:"pessoa 2", url:'https://cdn-icons-png.flaticon.com/512/65/65581.png'},
+    {id:3, nome:"pessoa 3", url:'https://cdn-icons-png.flaticon.com/512/0/93.png'},
+    {id:4, nome:"pessoa 4", url:'https://cdn-icons-png.flaticon.com/512/65/65581.png'},
+    {id:5,nome:"pessoa 5", url:'https://cdn-icons-png.flaticon.com/512/0/93.png'},
+    {id:6,nome:"pessoa 6", url:'https://cdn-icons-png.flaticon.com/512/65/65581.png'},
+    {id:7,nome:"pessoa 7", url:'https://cdn-icons-png.flaticon.com/512/0/93.png'},
+    {id:8,nome:"pessoa 8", url:'https://cdn-icons-png.flaticon.com/512/0/93.png'},
+    {id:9,nome:"pessoa 9", url:'https://cdn-icons-png.flaticon.com/512/0/93.png'},
+    {id:10,nome:"pessoa 10", url:'https://cdn-icons-png.flaticon.com/512/0/93.png'},
 ]
 
 
@@ -74,7 +74,7 @@ export const Second = () => {
 
                 <div className="grid grid-cols-5 gap-8 text-center items-center">
                     {galeria.map(galeria=>
-                        <p  className="text-white bg-blue-500 p-8 w-[200px] h-[200px]" key={galeria.id}>{galeria.nome}</p>
+                       <img src={galeria.url} alt="" className={style.galeria} />
                     )}
                 </div>
             </div>

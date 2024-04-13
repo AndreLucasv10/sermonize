@@ -10,3 +10,16 @@
     justify-content: center;
     align-items: center;
 }
+
+.galeria{
+    color:white;
+    background-color: rgb(85, 141, 224);
+    padding: 8px;
+    width:200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.galeria:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
