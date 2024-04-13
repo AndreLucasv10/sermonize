@@ -70,7 +70,7 @@ export const Second = () => {
     return (
         <div className="w-screen h-[550px] bg-black">
             <div className="w-screen flex flex-col justify-center items-center">
-                <h1 className="text-white text-center mb-4 uppercase font-bold">Galeria</h1>
+                <h1 className="text-white text-center mb-4 uppercase font-bold">Membros Sermonize</h1>
 
                 <div className="grid grid-cols-5 gap-8 text-center items-center">
                     {galeria.map(galeria=>
