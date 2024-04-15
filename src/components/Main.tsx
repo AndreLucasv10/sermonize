@@ -43,8 +43,8 @@ export const Main = () => {
 
                             <img className="w-screen h-[650px] " src={d.img} alt="" />
 
-                            <div className="w-screen  mb-4 flex justify-center animate-bounce">
-                                <FiArrowDownCircle className="text-sky-600 text-[55px] relative" />
+                            <div className="w-screen flex justify-center animate-bounce">
+                                <FiArrowDownCircle className="text-sky-600 text-[45px] relative" />
                             </div>
 
                         </div>
@@ -78,7 +78,7 @@ export const Second = () => {
     }
 
     return (
-        <div className="w-screen h-[750px] flex flex-col justify-center items-center bg-black">
+        <div className="w-screen h-[550px] flex flex-col justify-center items-center bg-black">
             <div className="w-screen flex flex-col justify-center items-center">
                 <h1 className="text-white text-center mb-4 uppercase font-bold">Membros Sermonize</h1>
 
