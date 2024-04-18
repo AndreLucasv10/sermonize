@@ -26,7 +26,7 @@ export const Footer = () => {
                     <div>
                         <div id="contato" className="flex justify-center items-center gap-2 mt-4">
                             <IoPhonePortraitOutline className="text-black" />
-                            <p className="text-white ">+55 (199) 98997-9996</p>
+                            <p className="text-white ">+55 (64) 99211-5732</p>
                         </div>
 
                         <div className="flex justify-center items-center gap-2">
