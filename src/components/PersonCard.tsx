@@ -2,7 +2,11 @@ import React, { MouseEvent, useEffect } from 'react';
 import { useState } from 'react';
 import Requisicao from '@/utilidade/Requisicao';
 const PersonCard: React.FC = () => {
+
+
   const [colaboradores, setColaboradores] = useState([])
+  
+
 
   const handleMouseEnter = (event: MouseEvent<HTMLDivElement>) => {
     const img = event.currentTarget.querySelector('.img') as HTMLImageElement
@@ -29,7 +33,7 @@ const PersonCard: React.FC = () => {
 
     useEffect(() =>{
       Requisicao.get('get-all').then((responde) =>{
-        setColaboradores(responde.data.studants)
+        setColaboradores(responde.data)
       })
     }, []) 
     console.log(colaboradores)
@@ -37,20 +41,20 @@ const PersonCard: React.FC = () => {
     <div>
     <h1 className='my-7 max-w-screen-md flex place-content-center text-2xl'>Nossos Colaboradores</h1>
     <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-screen-xl mx-auto my-4">
-      {[...Array(5)].map((_, index) => (
-        <div key={index} className="card relative overflow-hidden rounded-md" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      {colaboradores.map((Colaborador) => (
+        <div key={Colaborador._id} className="card relative overflow-hidden rounded-md" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <div className="poster">
             <img className='img ' src="https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg" alt="Location Unknown" />
           </div>
           <div className=" details absolute bottom-0 left-0 w-full bg-cyan-950 bg-opacity-90 px-4 py-8 transition duration-300 transform translate-y-full opacity-1 text-white text-sm">
-            <h1>André Lucas</h1>
-            <h2 className='my-1.5' >Desenvolvedor Front-end</h2>
+            <h1>{Colaborador.name}</h1>
+            <h2 className='my-1.5' >{Colaborador.course}</h2>
             <div className="tags flex flex-wrap gap-1">
               <h1>Tecnologias</h1>
-              <p className="break-words my-1.5">React, CSS, JavaScript, HTML, Next.js, Tailwind</p>
+              <p className="break-words my-1.5">{Colaborador.hardskills.join(' - ')}</p>
             </div>
             <p className="desc">
-              André é lindo maravilhoso e um cara muito charmoso altamente hablador e etc
+              {Colaborador.softskills.join(' - ')}
             </p>
             <div className="cast">
               <h3>Projetos</h3>

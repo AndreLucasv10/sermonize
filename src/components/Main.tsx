@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import style from "@/components/index.module.css";
 import { FiArrowDownCircle } from "react-icons/fi";
-import { personList } from "@/data/personList"
 
 
 
